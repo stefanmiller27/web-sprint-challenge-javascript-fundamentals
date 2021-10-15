@@ -31,10 +31,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(n) {
+  let fact = 0;
+    for (let i = 1; i <= n; i++) {
+        fact += i;
   }
+  return fact
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -62,8 +65,8 @@ const zooAnimals = [
   function animalNames(zooAnimals){
     const displayNames = [];
     zooAnimals.forEach(function (item){
-      displayNames.push(item.animal_name, item.scientific_name);
-      return displayNames [`name: ${animal_name}, scientific: ${scientific_name}`];
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+      // return displayNames [`name: ${animal_name}, scientific: ${scientific_name}`];
     })
     return displayNames
     
@@ -129,9 +132,8 @@ const zooAnimals = [
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(num1, num2, consume){
-    return consume(num1 + num2);
-
+function add(num1, num2){
+    return num1 + num2;
   }
   
   
@@ -139,8 +141,8 @@ function add(num1, num2, consume){
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(num1, num2, consume){
-   return consume(num1 * num2);
+function multiply(num1, num2){
+   return num1 * num2;
   }
 
 
